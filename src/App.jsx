@@ -4,14 +4,31 @@ import Card from "./componentes/Card/Card.jsx";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [step, setStep] = useState(0);
 
+  function nextStep() {
+    setStep(step + 1);
+  }
   const tutorialData = [
     {
       titulo: "Dedica moltes hores",
       descripcion:
-        "Un minim de 30 hores a la setmana. Si no en tens prou, hauras de dedicar-li mes hores. Al principi sembla impossible, pero notaras una millora rapidament.",
-      bgColor: "",
+        "Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.",
+      bgColor: "#FFFFFF",
+      imagen: "",
+    },
+    {
+      titulo: "Programa projectes propis",
+      descripcion:
+        "Més val 10 hores traballant en projectes propis, que 10 hores mirant tutorials. La motivació i la implicació en el projecte ajudarà a accelerar el teu aprenentatge.",
+      bgColor: "#FFFFFF",
+      imagen: "",
+    },
+    {
+      titulo: "Procura descansar",
+      descripcion:
+        "Descansar bé i desconnectar són vitals. D'aquesta manera reduiràs la teva concentració i consolidaràs el teu aprenentatge.",
+      bgColor: "#FFFFFF",
       imagen: "",
     },
   ];
@@ -20,10 +37,11 @@ function App() {
     <>
       <div>
         <Card
-          titulo={tutorialData[0].titulo}
-          descripcion={tutorialData[0].descripcion}
-          bgColor={tutorialData[0].bgColor}
-          imagen={tutorialData[0].imagen}
+          titulo={tutorialData[step].titulo}
+          descripcion={tutorialData[step].descripcion}
+          bgColor={tutorialData[step].bgColor}
+          imagen={tutorialData[step].imagen}
+          irAlSiguientePaso={nextStep}
         />
       </div>
     </>
