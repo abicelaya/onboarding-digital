@@ -58,6 +58,8 @@ function App() {
           bgColor={tutorialData[step].bgColor}
           irAlAnteriorPaso={hasPrev ? prevStep : null}
           irAlSiguientePaso={hasNext ? nextStep : null}
+          tutorialData={tutorialData}
+          step={step}
         />
       </div>
     </>
