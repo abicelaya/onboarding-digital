@@ -9,9 +9,6 @@ import "./App.css";
 function App() {
   const [step, setStep] = useState(0);
 
-  function nextStep() {
-    setStep(step + 1);
-  }
   const tutorialData = [
     {
       titulo: "Dedica moltes hores",
@@ -36,6 +33,21 @@ function App() {
     },
   ];
 
+  let hasPrev = step > 0;
+  let hasNext = step < tutorialData.length - 1;
+
+  function prevStep() {
+    if (hasPrev) {
+      setStep(step - 1);
+    }
+  }
+
+  function nextStep() {
+    if (hasNext) {
+      setStep(step + 1);
+    }
+  }
+
   return (
     <>
       <div className="d-flex justify-content-center align-items-center vh-100">
@@ -44,7 +56,8 @@ function App() {
           titulo={tutorialData[step].titulo}
           descripcion={tutorialData[step].descripcion}
           bgColor={tutorialData[step].bgColor}
-          irAlSiguientePaso={nextStep}
+          irAlAnteriorPaso={hasPrev ? prevStep : null}
+          irAlSiguientePaso={hasNext ? nextStep : null}
         />
       </div>
     </>

@@ -20,6 +20,7 @@
 #boton {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
 }
 
 .btn-circle {
@@ -32,7 +33,16 @@
   padding: 0;
 }
 
-.btn-icon i {
+.boton-izquierdo {
+  border: 1px solid #000000;
+}
+
+.bi-arrow-left {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.bi-arrow-right {
   font-size: 20px;
   color: white;
 }
