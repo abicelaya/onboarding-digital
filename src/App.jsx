@@ -48,6 +48,10 @@ function App() {
     }
   }
 
+  function showPhrase(stepPhrase) {
+    setStep(stepPhrase);
+  }
+
   return (
     <>
       <div className="d-flex justify-content-center align-items-center vh-100">
@@ -60,6 +64,7 @@ function App() {
           irAlSiguientePaso={hasNext ? nextStep : null}
           tutorialData={tutorialData}
           step={step}
+          goToPhrase={showPhrase}
         />
       </div>
     </>

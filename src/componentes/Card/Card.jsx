@@ -10,6 +10,7 @@ export default function Card({
   irAlSiguientePaso,
   tutorialData,
   step,
+  goToPhrase,
 }) {
   return (
     <div className="card" style={{ backgroundColor: bgColor }}>
@@ -21,7 +22,11 @@ export default function Card({
         <p className="card-text">{descripcion}</p>
 
         <div className="contenedor-footer-card">
-          <Indicador tutorialData={tutorialData} step={step} />
+          <Indicador
+            tutorialData={tutorialData}
+            step={step}
+            goToPhrase={goToPhrase}
+          />
           <div id="boton">
             {irAlAnteriorPaso && (
               <button
