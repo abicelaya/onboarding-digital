@@ -11,25 +11,25 @@ function App() {
 
   const tutorialData = [
     {
-      titulo: "Dedica moltes hores",
-      descripcion:
+      title: "Dedica moltes hores",
+      desciption:
         "Un mínim de 30 hores a la setmana. Si no en tens prou, hauràs de dedicar-li més hores. Al principi sembla impossible, però notaràs una millora ràpidament.",
       bgColor: "#0097A7",
-      imagen: TimeManagmentImage,
+      image: TimeManagmentImage,
     },
     {
-      titulo: "Programa projectes propis",
-      descripcion:
+      title: "Programa projectes propis",
+      desciption:
         "Més val 10 hores traballant en projectes propis, que 10 hores mirant tutorials. La motivació i la implicació en el projecte ajudarà a accelerar el teu aprenentatge.",
       bgColor: "#D5D8DC",
-      imagen: ProgrammingImage,
+      image: ProgrammingImage,
     },
     {
-      titulo: "Procura descansar",
-      descripcion:
+      title: "Procura descansar",
+      desciption:
         "Descansar bé i desconnectar són vitals. D'aquesta manera reduiràs la teva concentració i consolidaràs el teu aprenentatge.",
       bgColor: "#FFD54F",
-      imagen: MeditationImage,
+      image: MeditationImage,
     },
   ];
 
@@ -56,12 +56,12 @@ function App() {
     <>
       <div className="d-flex justify-content-center align-items-center vh-100">
         <Card
-          imagen={tutorialData[step].imagen}
-          titulo={tutorialData[step].titulo}
-          descripcion={tutorialData[step].descripcion}
+          image={tutorialData[step].image}
+          title={tutorialData[step].title}
+          desciption={tutorialData[step].desciption}
           bgColor={tutorialData[step].bgColor}
-          irAlAnteriorPaso={hasPrev ? prevStep : null}
-          irAlSiguientePaso={hasNext ? nextStep : null}
+          goToPrevStep={hasPrev ? prevStep : null}
+          goToNextStep={hasNext ? nextStep : null}
           tutorialData={tutorialData}
           step={step}
           goToPhrase={showPhrase}

@@ -5,7 +5,7 @@ export default function Indicador({ tutorialData, step, goToPhrase }) {
     <div className="indicador">
       {tutorialData.map((_, index) => (
         <p
-          className={index == step ? "actual" : "no-actual"}
+          className={index == step ? "current" : "no-current"}
           onClick={() => goToPhrase(index)}
           key={index}
         ></p>
