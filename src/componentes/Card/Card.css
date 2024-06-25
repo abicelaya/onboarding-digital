@@ -14,8 +14,9 @@
 }
 
 .card-img-top {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  max-height: 20rem;
 }
 
 .contenedor-footer-card {
@@ -23,7 +24,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
 }
 
 #boton {
